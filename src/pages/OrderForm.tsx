@@ -1,4 +1,5 @@
 import {StepLabel, Stepper, Step} from "@mui/material"
+import UserDetailsPage from "./UserDetailsPage"
 
 export default function OrderForm(): JSX.Element {
     return (
@@ -11,6 +12,7 @@ export default function OrderForm(): JSX.Element {
                     <StepLabel>Something</StepLabel>
                 </Step>
             </Stepper>
+            <UserDetailsPage/>
         </div>
     )
 }
