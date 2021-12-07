@@ -1,0 +1,14 @@
+.RadioButtonWithImage {
+    display: flex;
+    flex-direction: row;
+}
+
+.RadioButtonWithImage > .FormControlLabel {
+    align-self: center;
+}
+
+.RadioButtonWithImage > img {
+    max-height: 150px;
+    align-self: center;
+    margin: 10px;
+}

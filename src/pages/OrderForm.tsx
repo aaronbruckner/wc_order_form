@@ -1,5 +1,6 @@
 import {Button, StepLabel, Stepper, Step} from "@mui/material"
 import { useState } from "react"
+import CoreOptionsPage from "./CoreOptionsPage"
 import TermsPage from "./TermsPage"
 import UserDetailsPage from "./UserDetailsPage"
 
@@ -23,9 +24,13 @@ export default function OrderForm(): JSX.Element {
                 <Step>
                     <StepLabel>Terms</StepLabel>
                 </Step>
+                <Step>
+                    <StepLabel>Core</StepLabel>
+                </Step>
             </Stepper>
             {activeStep === 0 && <UserDetailsPage/>}
             {activeStep === 1 && <TermsPage/>}
+            {activeStep === 2 && <CoreOptionsPage/>}
 
             <Button onClick={onPrevClick}>Back</Button>
             <Button onClick={onNextClick}>Next</Button>
