@@ -1,0 +1,7 @@
+.gun-model-page {
+    margin: 20px;
+}
+
+.gun-model-page > .gun-model-selector-form-control {
+    min-width: 200px;
+}
