@@ -5,3 +5,13 @@
 .gun-model-page > .gun-model-selector-form-control {
     min-width: 200px;
 }
+
+.gun-model-page > .gun-image-carousel {
+    max-width: 1000px;
+}
+
+.gun-model-page > .gun-image-carousel img{
+    object-fit: contain;
+    height: 500px;
+    width: 700px;
+}

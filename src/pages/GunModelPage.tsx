@@ -2,8 +2,12 @@ import { FormControl, InputLabel, MenuItem, Select, SelectChangeEvent } from "@m
 import { useState } from "react"
 import "./GunModelPage.css"
 import gun_acp_1 from "../images/gun_acp_1.webp"
+import gun_acp_2 from "../images/gun_acp_2.webp"
 import gun_cqb_1 from "../images/gun_cqb_1.webp"
+import gun_cqb_2 from "../images/gun_cqb_2.webp"
 import gun_classic_1 from "../images/gun_classic_1.jpg"
+import gun_classic_2 from "../images/gun_classic_2.jpg"
+import Carousel from 'react-material-ui-carousel'
 
 enum GunModel {
     ACP = "ACP",
@@ -13,13 +17,13 @@ enum GunModel {
 
 const configs: any = {
     [GunModel.ACP]: {
-        imageSrc: gun_acp_1
+        imageSrcs: [gun_acp_1, gun_acp_2]
     },
     [GunModel.CQB]: {
-        imageSrc: gun_cqb_1
+        imageSrcs: [gun_cqb_1, gun_cqb_2]
     },
     [GunModel.Classic]: {
-        imageSrc: gun_classic_1
+        imageSrcs: [gun_classic_1, gun_classic_2]
     },
 }
 
@@ -41,7 +45,9 @@ export default function GunModelPage(): JSX.Element {
                 </Select>
             </FormControl>
             {gunConfig &&
-            <img src={gunConfig.imageSrc}/>
+            <Carousel className="gun-image-carousel" autoPlay={false} navButtonsAlwaysVisible={true}>
+                {gunConfig.imageSrcs.map((imageSrc: string, i: number) => <img src={imageSrc} key={i}/>)}
+            </Carousel>
             }
         </div>
     )
