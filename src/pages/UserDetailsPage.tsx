@@ -1,5 +1,4 @@
 import {Divider, Stack, TextField, Typography} from '@mui/material';
-import { flexbox } from '@mui/system';
 import './UserDetailsPage.css'
 
 export default function UserDetailsPage(): JSX.Element {
