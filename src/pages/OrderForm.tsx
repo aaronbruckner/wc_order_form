@@ -4,6 +4,7 @@ import CoreOptionsPage from "./CoreOptionsPage"
 import GunModelPage from "./GunModelPage"
 import TermsPage from "./TermsPage"
 import UserDetailsPage from "./UserDetailsPage"
+import "./OrderForm.css"
 
 export default function OrderForm(): JSX.Element {
     const [activeStep, setActiveStep] = useState(0)
@@ -17,7 +18,7 @@ export default function OrderForm(): JSX.Element {
     }
     
     return (
-        <div>
+        <div className="order-form">
             <Stepper activeStep={activeStep}>
                 <Step>
                     <StepLabel>User Details</StepLabel>

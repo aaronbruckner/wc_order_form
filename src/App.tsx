@@ -1,8 +1,6 @@
-import React from 'react';
 import './App.css';
 import wcLogo from './images/wc_logo.webp';
 import OrderForm from './pages/OrderForm';
-
 
 function App() {
   return (
